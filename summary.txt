@@ -1,0 +1,25 @@
+важные команды
+
+docker image build -t <имя образа> .
+
+docker run <имя вашего образа>
+
+docker run -p 8000:8000 -d <имя вашего образа>
+
+docker ps
+
+docker ps -a 
+
+docker image ls
+
+docker stop <id контейнера>
+
+docker rm <id контейнера>
+
+docker exec
+
+docker volume    (docker --mount)
+https://docs.docker.com/storage/volumes/
+
+вся дока
+https://docs.docker.com/

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<form action="{{url_for('res_check')}}" method="post">
+    <h2>
+        введите через запятую две страны, которые мы сравним по зарплатам в долларах
+    </h2>
+    <h2>
+    <input type="text" name="our_params" placeholder="вводите тут"/>
+    <button type="submit">посчитать</button>
+    </h2>
+</form>
+<h2>{{result}}</h2>
+
+{% endblock %}

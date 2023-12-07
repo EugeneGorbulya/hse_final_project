@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="cell markdown" id="yje2YPpWnnWC">
+
+    <h2 id="Describe">Describe DataFrame</h2>
+    <ul>
+    <li><em>work_year:</em> The year the salary was paid.</li>
+    <li><em>experience_level:</em> The experience level in the job during the year with the following possible values:
+    <ul>
+      <li><em>EN:</em> Entry-level / Junior</li>
+      <li><em>MI:</em> Mid-level / Intermediate</li>
+      <li><em>SE:</em> Senior-level / Expert</li>
+      <li><em>EX:</em> Executive-level / Director</li>
+    </ul>
+    </li>
+    <li><em>employment_type:</em> The type of employement for the role:
+      <ul>
+        <li><em>PT:</em> Part-time</li>
+        <li><em>FT:</em> Full-time</li>
+        <li><em>CT:</em> Contract</li>
+        <li><em>FL:</em> Freelance</li>
+      </ul>
+    </li>
+    <li><em>job_title:</em> The role worked in during the year.</li>
+    <li><em>salary:</em> The total gross salary amount paid.</li>
+    <li><em>salary_currency:</em> The currency of the salary paid as an ISO 4217 currency code.</li>
+    <li><em>salary_in_usd:</em>  The salary in USD (FX rate divided by avg. USD rate for the respective year via fxdata.foorilla.com).</li>
+    <li><em>employee_residence:</em> Employee's primary country of residence in during the work year as an ISO 3166 country code. </li>
+    <li><em>remote_ratio:</em> The overall amount of work done remotely, possible values are as follows:
+      <ul>
+        <li><em>0:</em> No remote work (less than 20%)</li>
+        <li><em>50:</em> Partially remote</li>
+        <li><em>100:</em> Fully remote (more than 80%)</li>
+      </ul>
+    </li>
+    <li><em>company_location:</em> The country of the employer's main office or contracting branch as an ISO 3166 country code.</li>
+    <li><em>company_size:</em> The average number of people that worked for the company during the year:
+      <ul>
+        <li><em>S:</em> less than 50 employees (small)</li>
+        <li><em>M:</em> 50 to 250 employees (medium)</li>
+        <li><em>L:</em> more than 250 employees (large)</li>
+      </ul>
+    </li>
+    </ul>
+</div>
+
+{% endblock %}
