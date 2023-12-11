@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
+from io import BytesIO
+import requests
 
 
 if __name__ == "__main__":
@@ -39,14 +41,18 @@ L: more than 250 employees (large)""")
     st.subheader("Some Graphics")
     choose = st.selectbox("Graphics: ", ['Map', 'Salary in dollars depends on the position', 'Comparison of EU and USA', 'Count of jobs per year'])
     if choose == 'Map':
-        img = Image.open(r'streamlit/map.png')
+        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/map.png")
+        img = Image.open(BytesIO(response.content))
         st.image(img)
     if choose == 'Salary in dollars depends on the position':
-        img = Image.open(r'streamlit/comp_salary.png')
+        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/comp_salary.png")
+        img = Image.open(BytesIO(response.content))
         st.image(img)
     if choose == 'Comparison of EU and USA':
-        img = Image.open(r'streamlit/comparison.png')
+        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/comparison.png")
+        img = Image.open(BytesIO(response.content))
         st.image(img)
     if choose == 'Count of jobs per year':
-        img = Image.open(r'streamlit/count_of_jobs.png')
+        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/count_of_jobs.png")
+        img = Image.open(BytesIO(response.content))
         st.image(img)
