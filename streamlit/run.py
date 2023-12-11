@@ -39,14 +39,14 @@ L: more than 250 employees (large)""")
     st.subheader("Some Graphics")
     choose = st.selectbox("Graphics: ", ['Map', 'Salary in dollars depends on the position', 'Comparison of EU and USA', 'Count of jobs per year'])
     if choose == 'Map':
-        img = Image.open("streamlit/map.png")
+        img = Image.open(r'streamlit/map.png')
         st.image(img)
     if choose == 'Salary in dollars depends on the position':
-        img = Image.open("streamlit/comp_salary.png")
+        img = Image.open(r'streamlit/comp_salary.png')
         st.image(img)
     if choose == 'Comparison of EU and USA':
-        img = Image.open("streamlit/comparison.png")
+        img = Image.open(r'streamlit/comparison.png')
         st.image(img)
     if choose == 'Count of jobs per year':
-        img = Image.open("streamlit/count_of_jobs.png")
+        img = Image.open(r'streamlit/count_of_jobs.png')
         st.image(img)
