@@ -39,14 +39,14 @@ L: more than 250 employees (large)""")
     st.subheader("Some Graphics")
     choose = st.selectbox("Graphics: ", ['Map', 'Salary in dollars depends on the position', 'Comparison of EU and USA', 'Count of jobs per year'])
     if choose == 'Map':
-        img = Image.open("/Users/engorgen/Documents/Dev/web/static/map.png")
+        img = Image.open("hse_final_project/static/map.png")
         st.image(img)
     if choose == 'Salary in dollars depends on the position':
-        img = Image.open("/Users/engorgen/Documents/Dev/web/static/comp_salary.png")
+        img = Image.open("hse_final_project/static/comp_salary.png")
         st.image(img)
     if choose == 'Comparison of EU and USA':
-        img = Image.open("/Users/engorgen/Documents/Dev/web/static/comparison.png")
+        img = Image.open("hse_final_project/static/comparison.png")
         st.image(img)
     if choose == 'Count of jobs per year':
-        img = Image.open("/Users/engorgen/Documents/Dev/web/static/count_of_jobs.png")
+        img = Image.open("hse_final_project/static/count_of_jobs.png")
         st.image(img)
