@@ -4,7 +4,7 @@ from PIL import Image
 
 
 if __name__ == "__main__":
-    data = pd.read_csv("salaries.csv")
+    data = pd.read_csv(r'files/salaries.csv')
     st.title("Example of DataFrame on Streamlit")
     st.header("Example of DataFrame on Streamlit")
     st.subheader("Describe")
