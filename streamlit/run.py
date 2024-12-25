@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-from io import BytesIO
-import requests
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 if __name__ == "__main__":
-    data = pd.read_csv(r'streamlit/salaries.csv')
+    data = pd.read_csv("data/salaries.csv")
     st.title("Example of DataFrame on Streamlit")
     st.header("Example of DataFrame on Streamlit")
     st.subheader("Describe")
@@ -41,18 +42,18 @@ L: more than 250 employees (large)""")
     st.subheader("Some Graphics")
     choose = st.selectbox("Graphics: ", ['Map', 'Salary in dollars depends on the position', 'Comparison of EU and USA', 'Count of jobs per year'])
     if choose == 'Map':
-        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/map.png")
-        img = Image.open(BytesIO(response.content))
+        image_path = os.path.join(script_dir, '..', 'static', 'map.png')
+        img = Image.open(image_path)
         st.image(img)
     if choose == 'Salary in dollars depends on the position':
-        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/comp_salary.png")
-        img = Image.open(BytesIO(response.content))
+        image_path = os.path.join(script_dir, '..', 'static', 'comp_salary.png')
+        img = Image.open(image_path)
         st.image(img)
     if choose == 'Comparison of EU and USA':
-        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/comparison.png")
-        img = Image.open(BytesIO(response.content))
+        image_path = os.path.join(script_dir, '..', 'static', 'comparison.png')
+        img = Image.open(image_path)
         st.image(img)
     if choose == 'Count of jobs per year':
-        response = requests.get("https://raw.githubusercontent.com/EugeneGorbulya/hse_final_project/main/streamlit/count_of_jobs.png")
-        img = Image.open(BytesIO(response.content))
+        image_path = os.path.join(script_dir, '..', 'static', 'count_of_jobs.png')
+        img = Image.open(image_path)
         st.image(img)
